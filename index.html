@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>
+		Site para troca de livros
+	</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet" type="text/css" href="css\estilo.css">
+</head>
+<body background="img/fundo-livro.jpg">
+
+<div id="menu">
+    <fieldset>
+
+        <div id="boasvindas">
+    	<h2>Bem vindo visitante!</h2>
+    	<h3>Aqui nesse site de troca de livros você podem cadastrar aqueles livros que estão na estante há muito tempo, e que você não precisa mais, a única coisa que você precisa fazer é cadastrá-los. Fora isso, você também pode pegar livros de outros usuários, como podem ver logo abaixo, existem várias opções para você. Aproveite!</h3>
+        </div>
+
+    	<div id="ins">
+    		<p> 1 - Inserir um livro </p>
+    	</div>
+
+    	<div id="busc">
+    		<p> 2 - Buscar por um livro </p>
+    	</div>
+
+    	<div id="most">
+    		<p> 3 - Mostrar todos os livros </p>
+    	</div>
+
+    	<div id="edi">
+    		<p> 4 - Editar meu livro </p>
+    	</div>
+
+    	<div id="exc">
+    		<p> 5 - Excluir meu livro </p>
+    	</div>
+ 
+        <div class="inmenu">
+    	<p><input type="number" id="opcoes" class="intodos" placeholder="Escolha uma das opções">
+    	<br>
+    	<button onclick="menu(+opcoes.value)" id="bot">Concluído</button></p>
+    	</div>
+
+    </fieldset>
+    </div>
+
+    <div id="inserir" class="inv">
+    	<fieldset>
+
+    	    <div class="titulo-op">
+    		<h2>Cadastro do livro</h2>
+    		</div>
+
+    		<div class="inmenu">
+    		<p><input type="text" id="nomeins" class="intodos" placeholder="Nome do livro"></p>
+    		<p><input type="number" id="idins" class="intodos" placeholder="Crie uma ID para o livro"></p>
+    		<p><input type="text" id="emailins" class="intodos" placeholder="E-mail para contato"></p>
+    		<p><button onclick="inserir()" class="tod-bot">Salvar</button> <br> <button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    		</div>
+
+    	</fieldset>
+    </div>
+
+    <div id="buscar" class="inv">
+    	<fieldset>
+
+    	    <div class="titulo-op">
+    		<h2>Buscar livro</h2>
+    		</div>
+
+    		<div class="inmenu">
+    		<p><input type="text" id="nomebusc" class="intodos" placeholder="Nome do livro"></p>
+    		<p><button onclick="buscar(nomebusc.value)" class="tod-bot">Concluído</button> <br> <button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    		<hr>
+    		<p id="result"></p>
+    		</div>
+
+    	</fieldset>
+    </div>
+
+    <div id="mostrar" class="inv">
+    	<fieldset>
+
+    	    <div class="titulo-op">
+    		<h2>Livros Cadastrados</h2>
+    		<br>
+    		<p id="mostbot"><button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    		</div>
+
+    	</fieldset>
+    </div>
+
+    <div id="editar" class="inv">
+    	<fieldset>
+
+    	    <div class="titulo-op">
+    		<h2>Editar seu cadastros</h2>
+    		</div>
+
+    		<div class="inmenu">
+    		<p><input type="number" id="numidedi" class="intodos" placeholder="ID do livro"></p>
+    		<p><button onclick="editar(1,numidedi.value)" class="tod-bot">Concluído</button> <br> <button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    		</div>
+    		<hr>
+    		<p id="resultedi"></p>
+    		<div id="formedi" class="inv">
+
+    		    <div class="inmenu">
+    			<p><input type="text" id="nomeedi" class="intodos"></p>
+    			<p><input type="number" id="idedi" class="intodos"></p>
+    			<p><input type="text" id="emailedi" class="intodos"></p>
+    			<p><button onclick="editar(2)" class="tod-bot">Salvar alterações</button> <br> <button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    			</div>
+
+    		</div>
+    	</fieldset>
+    </div>
+
+    <div id="excluir" class="inv">
+    	<p id="resultexc"></p>
+    	<fieldset>
+
+    	    <div class="titulo-op">
+    		<h2>Apagar seu cadastro</h2>
+    		</div>
+
+    		<div class="inmenu">
+    		<p><input type="number" id="idexc" class="intodos" placeholder="ID do livro"></p>
+    		<p><button onclick="apagar(idexc.value)" class="tod-bot">Concluído</button> <br> <button onclick="tela('menu');" class="tod-botao">Voltar</button></p>
+    		</div>
+
+    	</fieldset>
+    </div>
+
+    <script type="text/javascript" src="acoes.js"></script>
+
+    </body>
+</html>
